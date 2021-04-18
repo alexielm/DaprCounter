@@ -5,10 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    depends_on:
-      - redis
     networks:
       - service-network
+
   daprcounter-dapr:
     image: "daprio/daprd:latest"
     command: ["./daprd",
